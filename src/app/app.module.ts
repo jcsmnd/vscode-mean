@@ -12,6 +12,7 @@ import { CreateComponent } from './post/create/create.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './post/list/list.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PostListComponent } from './post/list/list.component';
     AppComponent,
     CreateComponent,
     HeaderComponent,
-    PostListComponent
+    PostListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

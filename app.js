@@ -20,15 +20,16 @@ const app = express();
 const port = 3000;
 const users = require('./routes/users');
 
-//cors middleware
-app.use(cors());
-
 //static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// bodyparser middleware
+//middleware
+app.use(cors());
 app.use(bodyParser.json());
 app.use('/users', users);
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport')(passport);
 
 // index route
 app.get('/', (req, res) => {
